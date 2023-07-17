@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    position: sticky;
+    top: 0px;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10%;
+    background-color: #212529;
+    z-index: 1;
+}
+#welcome-section {
+    height: 100vh;
+    background-image: url('https://cdn.wallpapersafari.com/22/29/JHYBWg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    h1{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+    }
+}
+#projects {
+    background-color: black;
+    display: flex;
+    flex-flow: row wrap;
+    a {
+        position: relative;
+        width: 50%;
+        transition: 0.5s;
+        .project-tile {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+        }
+    }
+    a:hover {
+        transform: scale(1,1.1) translate(0, -50px);
+        border-radius: 10px 10px 0 0;
+    }
+    img {
+        width: 100%;
+    }
+}
+#contact p a {
+    display: inline;
+}
+.contact {
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    >div {
+        padding: 40px;
+        width: 50%;
+        background-color: rgba(82, 139, 139, 0.8);
+        >div {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+    }
+}
+/**********************************      media query      *******************************************/
+@media(max-width: 1024px) {
+    #projects {
+        flex-flow: column wrap;
+        a {
+            width: 100%;
+        }
+    }
+    .contact {
+        flex-flow: column;
+        >div {
+            width: 100%;
+            padding: 25px;
+        }
+    }
+}
+@media(max-width: 768px) {
+    #projects {
+        flex-flow: column wrap;
+        a {
+            width: 100%;
+        }
+    }
+    .contact {
+        flex-flow: column;
+        >div {
+            width: 100%;
+            padding: 25px;
+        }
+    }
+}
