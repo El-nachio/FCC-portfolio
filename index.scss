@@ -46,8 +46,9 @@ nav {
     justify-content: space-between;
     a {
         position: relative;
-        width: 50%;
+        width: 49%;
         transition: 0.5s;
+        margin: 1em 0;
         .project-tile {
             position: absolute;
             width: 100%;

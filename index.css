@@ -52,8 +52,9 @@ nav {
 }
 #projects a {
   position: relative;
-  width: 50%;
+  width: 49%;
   transition: 0.5s;
+  margin: 1em 0;
 }
 #projects a .project-tile {
   position: absolute;
