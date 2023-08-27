@@ -11,38 +11,61 @@ nav {
     background-color: #212529;
     z-index: 1;
 }
+.profile-photo {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-25%, -75%);
+    border-radius: 50%;
+    width: 200px;
+}
 #welcome-section {
     height: 100vh;
-    background-image: url('https://cdn.wallpapersafari.com/22/29/JHYBWg.png');
+    background-image: url('https://i.pinimg.com/originals/15/1e/99/151e99f73bc7629406867e7f68dbf058.jpg');
     background-repeat: no-repeat;
     background-position: center center;
-    h1{
+    background-size: cover;
+    h1, p{
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 75%;
+        left: 20%;
+        transform: translate(-25%, -75%);
         text-align: center;
-        color: white;
+        color: rgb(24, 23, 23);
+    }
+    p {
+        top: 90%;
+        transform: translate(-15%, -60%);
     }
 }
 #projects {
     background-color: black;
     display: flex;
     flex-flow: row wrap;
+    column-gap: 1%;
+    justify-content: space-between;
     a {
         position: relative;
         width: 50%;
         transition: 0.5s;
         .project-tile {
             position: absolute;
+            width: 100%;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
             color: white;
+            background: rgba(29, 106, 154, 0.72);
+            color: #fff;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .2s, visibility .2s;
+            margin: 1em 0;
         }
     }
-    a:hover {
-        transform: scale(1,1.1) translate(0, -50px);
+    a:hover .project-tile {
+        visibility: visible;
+        opacity: 1;
         border-radius: 10px 10px 0 0;
     }
     img {
