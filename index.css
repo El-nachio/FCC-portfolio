@@ -43,16 +43,16 @@ nav {
 }
 
 #projects {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.442);
+  height: 100vh;
   display: flex;
   flex-flow: row wrap;
-  -moz-column-gap: 1%;
-       column-gap: 1%;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 #projects a {
   position: relative;
-  width: 49%;
+  width: 70vw;
   transition: 0.5s;
   margin: 1em 0;
 }
@@ -78,6 +78,10 @@ nav {
 #projects img {
   width: 100%;
 }
+#projects i {
+  font-size: 2em;
+  border-radius: 50%;
+}
 
 #contact p a {
   display: inline;
@@ -88,15 +92,62 @@ nav {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  justify-content: space-around;
 }
-.contact > div {
-  padding: 40px;
-  width: 50%;
-  background-color: rgba(82, 139, 139, 0.8);
+.contact ul {
+  list-style-type: none;
 }
-.contact > div > div {
-  height: 60px;
+.contact li {
+  display: flex;
+  align-items: flex-end;
+}
+.contact li p {
+  color: white;
+  font-size: 20px;
+}
+.contact li i {
+  margin: 0 5px;
+}
+.contact .contact-input input, .contact textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  padding: 10px 0;
+  outline: none;
   margin-bottom: 20px;
+}
+.contact .contact-form {
+  justify-content: center;
+  width: 40vw;
+  height: 80vh;
+  padding: 20px;
+}
+.contact .contact-form, .contact .contact-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-contact {
+  display: none;
+  background-color: #212529;
+  justify-content: space-between;
+  width: 60%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  animation: fadeInUp 0.5s 0.5s forwards;
+  opacity: 0;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+.info-contact ul li i {
+  font-size: xx-large;
 }
 
 /**********************************      media query      *******************************************/
