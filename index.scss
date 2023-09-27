@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Montserrat&display=swap');
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Itim', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 nav {
     position: sticky;
@@ -38,6 +41,16 @@ nav {
         transform: translate(-15%, -60%);
     }
 }
+.project-fade {
+    opacity: 0;
+    transition: ease-in .4s;
+    transform:translate(-40vw)
+}
+.project-fade-in {
+    opacity: 1;
+    transition: ease-out .4s;
+}
+
 #projects {
     background-color: rgba(0, 0, 0, 0.442);
     height: 100vh;
@@ -48,7 +61,6 @@ nav {
     a {
         position: relative;
         width: 70vw;
-        transition: 0.5s;
         margin: 1em 0;
         .project-tile {
             position: absolute;
@@ -57,18 +69,19 @@ nav {
             left: 50%;
             transform: translateX(-50%);
             color: white;
+            font-size: 1.5em;
             background: rgba(29, 106, 154, 0.72);
             color: #fff;
             visibility: hidden;
             opacity: 0;
-            transition: opacity .2s, visibility .2s;
+            transition: opacity .5s, visibility .5s;
             margin: 1em 0;
+            border-radius: 10px 10px 0 0;
         }
     }
     a:hover .project-tile {
         visibility: visible;
         opacity: 1;
-        border-radius: 10px 10px 0 0;
     }
     img {
         width: 100%;

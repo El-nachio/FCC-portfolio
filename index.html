@@ -24,9 +24,9 @@
         </div>
         <div id="projects">
             <i class="bi bi-arrow-left-circle btn btn-primary" id="left-button" style="position: relative; right: 7%"></i>
-            <a class="project-tile" href="https://codepen.io/el-nachio/full/JjpEPZR">
-                <p class="project-tile">Project title</p>
-                <img src='projects-pic\Captura de pantalla 2023-08-22 202132.png' alt='Survey Form'></img>
+            <a class="project-tile" id = 'proyect-link' href="https://codepen.io/el-nachio/full/JjpEPZR">
+                <p class="project-tile" id="description">This HTML code represents a personal web page for Taborda Ignacio, a Front-End Developer. The page includes sections for navigation, presentation, projects, and contact information.</p>
+                <img src='projects-pic\Captura de pantalla 2023-08-22 202132.png' id="projetc-img" alt='Survey Form'></img>
             </a>
             <i class="bi bi-arrow-right-circle btn btn-primary" id="right-button" style="position: relative; left: 7%"></i>
             <!-- <a class="project-tile" href="https://codepen.io/el-nachio/full/JjpEPZR">
@@ -55,14 +55,6 @@
             </a> -->
         </div>
         <div class="contact" id="contact">
-            <!-- <div id='contact'>
-                <p>Email: <a class='nav-link' href="#contact">igna-232011@hotmail.com</a></p>
-                <p>instragram: <a class='nav-link' href="https://www.instagram.com/taborda__ignacio/">insagram</a></p>
-                <p>codePen: <a class='nav-link' href="https://codepen.io/el-nachio">el-nachio</a></p>
-                <p>freecodecamp: <a class='nav-link' href="https://www.freecodecamp.org/Ignacio_Taborda">Ignacio_Taborda</a></p>
-                <p>Github: <a class='nav-link' href="https://github.com/El-nachio">el-nachio</a></p>
-                <p>LinkedIn: <a class='nav-link' href="https://www.linkedin.com/in/ignacio-taborda-26a2b321b/">Ignacio Taborda</a></p>
-            </div> -->
             <div>
                 <h2>Lets talk about everything!&nbsp</h2>
                 <h3>Contact links&nbsp<a href="#contact" id="links" onclick="handleClick()"><i class="bi bi-envelope-fill"></i></a></h3>
@@ -133,18 +125,19 @@
                     </li>
                 </ul>
             </section>
-            <form class="contact-form">
+            <!-- para poder hacer que el formulario me envie un mail utilice la pagina abajo descipta es un codigo que me proporcionaron al verificar el email-->
+            <form id='contact-form' class="contact-form" action="https://formsubmit.co/igna-232011@homail.com" method="POST">
                 <div class="contact-input">
                     <label>Name</label>
-                    <input type="text">
+                    <input type="text" id="input-name" required>
                 </div>
                 <div class="contact-input">
                     <label>Email</label>
-                    <input type="email">
+                    <input type="email" id="input-email" required>
                 </div>
                 <div class="contact-input">
                     <label>Message</label>
-                    <textarea></textarea>
+                    <textarea id="message" required></textarea>
                 </div>
                 <input type="submit" class="btn btn-primary" id="contact-submit">
             </form>
