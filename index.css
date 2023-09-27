@@ -154,14 +154,14 @@ nav {
   animation: fadeInUp 0.5s 0.5s forwards;
   opacity: 0;
 }
+.info-contact ul li i {
+  font-size: xx-large;
+}
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translate(-50%, -50%);
   }
-}
-.info-contact ul li i {
-  font-size: xx-large;
 }
 
 /**********************************      media query      *******************************************/
@@ -195,5 +195,14 @@ nav {
   }
   #contact-form {
     width: 90vw;
+  }
+  .info-contact {
+    width: 80vw;
+  }
+  .info-contact ul li i {
+    font-size: 2em;
+  }
+  .info-contact .copy-icon {
+    display: none;
   }
 }/*# sourceMappingURL=index.css.map */

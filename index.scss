@@ -145,6 +145,9 @@ nav {
     z-index: 999;
     animation: fadeInUp 0.5s 0.5s forwards;
     opacity: 0;
+    ul li i {
+        font-size: xx-large;
+    }
 
 @keyframes fadeInUp {
     to {
@@ -152,9 +155,6 @@ nav {
         transform: translate(-50%, -50%);
     }
 }
-    ul li i {
-        font-size: xx-large;
-    }
 }
 /**********************************      media query      *******************************************/
 @media(max-width: 1024px) {
@@ -189,5 +189,14 @@ nav {
     }
     #contact-form {
         width: 90vw;
+    }
+    .info-contact {
+        width: 80vw;
+        ul li i {
+            font-size: 2em;
+        }
+        .copy-icon {
+            display: none;
+        }
     }
 }
