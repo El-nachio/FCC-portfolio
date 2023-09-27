@@ -158,8 +158,17 @@ nav {
 }
 /**********************************      media query      *******************************************/
 @media(max-width: 1024px) {
+    .profile-photo {
+        left: 35%;
+        transform: translate(-25%, -75%);
+    }
+    #welcome-section {
+        h1, p {
+        transform: translate(-15%, -75%);
+        }
+    }
     #projects {
-        flex-flow: column wrap;
+        flex-flow: row wrap;
         a {
             width: 100%;
         }
