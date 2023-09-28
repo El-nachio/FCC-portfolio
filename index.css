@@ -13,7 +13,18 @@ nav {
   align-items: center;
   height: 10%;
   background-color: #212529;
-  z-index: 1;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.nav-link {
+  padding: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.nav-link:hover {
+  color: #f76c6c;
 }
 
 .profile-photo {
@@ -57,7 +68,6 @@ nav {
 }
 
 #projects {
-  background-color: rgba(0, 0, 0, 0.442);
   height: 100vh;
   display: flex;
   flex-flow: row wrap;
@@ -164,6 +174,48 @@ nav {
   }
 }
 
+/******************************************footer**********************************************************/
+.footer {
+  background-color: #212529;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 10px 0;
+}
+
+.social-icons li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
 /**********************************      media query      *******************************************/
 @media (max-width: 1024px) {
   .profile-photo {
@@ -181,11 +233,17 @@ nav {
   }
   #projects img {
     width: 100vw;
-    height: 60vh;
+    height: 50vh;
   }
   #projects i {
     position: absolute !important;
     z-index: 3;
+  }
+  #projects #right-button {
+    left: 80% !important;
+  }
+  #projects #left-button {
+    right: 80% !important;
   }
   #projects a {
     width: 100%;
