@@ -93,10 +93,16 @@ nav {
     }
     img {
         width: 100%;
+        height: 80vh;
     }
     i {
         font-size: 2em;
         border-radius: 50%;
+    }
+    span {
+        position: absolute;
+        top: 110%;
+        z-index: 4;
     }
 }
 #contact p a {
@@ -213,6 +219,9 @@ nav {
         left: 35%;
         transform: translate(-25%, -75%);
     }
+    .nav {
+        justify-content: center;
+    }
     .nav-link {
         padding: 0.5rem 0.5rem;
     }
@@ -222,7 +231,6 @@ nav {
         }
     }
     #projects {
-        height: auto;
         img {
             width: 100vw;
             height: 50vh;
@@ -240,6 +248,13 @@ nav {
         a {
             width: 100%;
         }
+        span {
+            top: 115%;
+            text-align: center;
+        }
+    }
+    .contact {
+        align-content: flex-end;
     }
     .contact > div {
         text-align: center;
